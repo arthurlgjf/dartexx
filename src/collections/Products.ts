@@ -4,7 +4,7 @@ export const Products: CollectionConfig = {
   slug: 'products',
   admin: {
     useAsTitle: 'title',
-    defaultColumns: ['title', 'price', 'currency', '_status'],
+    defaultColumns: ['title', 'price', '_status'],
     group: 'Obsah',
     description:
       'Automaty a zábavné stroje na prenájom. Konkrétny sortiment dopĺňajte postupne podľa reálnej ponuky.',
