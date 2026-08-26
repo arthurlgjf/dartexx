@@ -156,49 +156,63 @@ export default async function HomePage() {
         </div>
       </header>
 
-      {/* ── Hero ──────────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden border-b border-zinc-200">
+      {/* ── Hero — celoplošné video pozadie ──────────────────────────────── */}
+      <section className="relative flex min-h-[100svh] items-center overflow-hidden border-b border-zinc-200 bg-black">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+          aria-hidden
+        >
+          <source src="/hero.mp4" type="video/mp4" />
+        </video>
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(166,36,49,0.12),transparent_70%)]"
+          className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"
         />
-        <div className="container-page relative pt-10">
-          <div className="grid grid-cols-12 gap-x-3 pt-10 pb-12 sm:pt-14">
+        <div className="container-page relative pt-20 pb-16">
+          <div className="grid grid-cols-12 gap-x-3">
             <div className="col-span-12 flex flex-col items-center text-center lg:col-span-8 lg:col-start-3">
               <Reveal>
-                <span className="inline-flex items-center gap-1 rounded-full border border-zinc-200 bg-white px-2 py-1 text-xs font-medium tracking-wide text-zinc-600 shadow-sm">
-                  <span className="size-1 rounded-full bg-accent-500" />
+                <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-md">
+                  <span className="size-1.5 rounded-full bg-accent-400" />
                   Prenájom automatov na podujatia
                 </span>
               </Reveal>
 
               <Reveal delay={0.08}>
-                <h1 className="mt-4 max-w-3xl">
+                <h1 className="mt-5 max-w-3xl text-white">
                   Podujatie plné zábavy,{' '}
-                  <span className="text-accent-600">ktorú si ľudia zapamätajú.</span>
+                  <span className="text-accent-300">ktorú si ľudia zapamätajú.</span>
                 </h1>
               </Reveal>
 
               <Reveal delay={0.16}>
-                <p className="mt-3 max-w-2xl text-lead text-zinc-600">
+                <p className="mt-4 max-w-2xl text-lead text-zinc-200">
                   Prenájom automatov a zábavných strojov pre podujatia, prevádzky aj verejné
                   priestory. Zaistíme dopravu, inštaláciu aj servis — vy pozvete hostí.
                 </p>
               </Reveal>
 
               <Reveal delay={0.24}>
-                <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
+                <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
                   <Button href="#kontakt">
                     Nezáväzná ponuka
                   </Button>
-                  <Button href="#automaty" variant="secondary">
+                  <Button
+                    href="#automaty"
+                    variant="secondary"
+                    className="border-white/30 bg-white/10 text-white backdrop-blur-md hover:border-white/60 hover:text-white"
+                  >
                     Pozrieť automaty
                   </Button>
                 </div>
               </Reveal>
 
               <Reveal delay={0.32}>
-                <p className="mt-6 text-xs tracking-wide text-zinc-500">
+                <p className="mt-8 text-xs tracking-wide text-zinc-300">
                   Dlhoročné skúsenosti · Realizácie po celom Slovensku · Kompletná praktická realizácia
                 </p>
               </Reveal>
