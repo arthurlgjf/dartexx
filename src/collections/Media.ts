@@ -20,5 +20,22 @@ export const Media: CollectionConfig = {
       required: true,
     },
   ],
-  upload: true,
+  upload: {
+    staticDir: process.env.VERCEL ? '/tmp/media' : 'media',
+    mimeTypes: ['image/*'],
+    imageSizes: [
+      {
+        name: 'thumbnail',
+        width: 300,
+        height: 300,
+        position: 'centre',
+      },
+      {
+        name: 'card',
+        width: 600,
+        height: 400,
+        position: 'centre',
+      },
+    ],
+  },
 }

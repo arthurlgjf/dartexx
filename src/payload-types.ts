@@ -212,7 +212,6 @@ export interface Product {
    * Základná cena prenájmu (bez DPH, ak je uvedená aj mena).
    */
   price: number;
-  currency?: ('EUR' | 'USD' | 'GBP') | null;
   image?: (number | null) | Media;
   gallery?:
     | {
@@ -558,7 +557,6 @@ export interface ProductsSelect<T extends boolean = true> {
   excerpt?: T;
   description?: T;
   price?: T;
-  currency?: T;
   image?: T;
   gallery?:
     | T

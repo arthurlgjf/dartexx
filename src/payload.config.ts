@@ -2,10 +2,9 @@ import { postgresAdapter } from '@payloadcms/db-postgres'
 import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
 import { formBuilderPlugin } from '@payloadcms/plugin-form-builder'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
-import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import { sk } from '@payloadcms/translations/languages/sk'
 import path from 'path'
-import { buildConfig } from 'payload'
+import { buildConfig, type Plugin } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 
@@ -69,12 +68,6 @@ export default buildConfig({
   },
   sharp,
   plugins: [
-    vercelBlobStorage({
-      collections: ['media'],
-      options: {
-        token: process.env.BLOB_READ_WRITE_TOKEN || '',
-      },
-    }),
     formBuilderPlugin({
       fields: {
         checkbox: true,

@@ -66,17 +66,6 @@ export const Products: CollectionConfig = {
       },
     },
     {
-      name: 'currency',
-      label: 'Mena',
-      type: 'select',
-      defaultValue: 'EUR',
-      options: [
-        { label: 'EUR €', value: 'EUR' },
-        { label: 'USD $', value: 'USD' },
-        { label: 'GBP £', value: 'GBP' },
-      ],
-    },
-    {
       name: 'image',
       label: 'Hlavná fotografia',
       type: 'upload',
