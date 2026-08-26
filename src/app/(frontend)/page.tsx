@@ -11,10 +11,11 @@ import type { Form, Product, Reference, SiteSetting } from '@/payload-types'
 export const dynamic = 'force-dynamic'
 
 const navLinks = [
-  { href: '#automaty', label: 'Automaty' },
+  { href: '#automaty', label: 'Zábavné automaty' },
   { href: '#pre-koho', label: 'Kam sa hodia' },
   { href: '#ako-to-funguje', label: 'Ako to funguje' },
   { href: '#referencie', label: 'Referencie' },
+  { href: '#predaj', label: 'Ďalšie služby' },
   { href: '#kontakt', label: 'Kontakt' },
 ]
 
@@ -184,11 +185,6 @@ export default async function HomePage() {
                 </div>
               </Reveal>
 
-              <Reveal delay={0.32}>
-                <p className="mt-8 text-xs tracking-wide text-zinc-300">
-                  Dlhoročné skúsenosti · Realizácie po celom Slovensku · Kompletná praktická realizácia
-                </p>
-              </Reveal>
             </div>
           </div>
         </div>
