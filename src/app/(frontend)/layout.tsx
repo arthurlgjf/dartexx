@@ -1,4 +1,5 @@
 import React from 'react'
+import { Analytics } from '@vercel/analytics/next'
 import './styles.css'
 
 export const metadata = {
@@ -23,6 +24,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
           href="https://api.fontshare.com/v2/css?f%5B%5D=switzer@400,500,600,700&display=swap"
         />
         <main>{children}</main>
+        <Analytics />
       </body>
     </html>
   )
