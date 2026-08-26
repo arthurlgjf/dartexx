@@ -350,11 +350,11 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── Predaj & Servis ───────────────────────────────────────────────── */}
+      {/* ── Ďalšie služby ───────────────────────────────────────────────── */}
       <section id="predaj-a-servis" className="border-b border-zinc-200 py-12">
         <div className="container-page">
           <Reveal className="grid grid-cols-12 gap-x-3">
-            <h2 className="col-span-12">Predaj &amp; servis</h2>
+            <h2 className="col-span-12">Ďalšie služby</h2>
           </Reveal>
           <div className="mt-6 grid grid-cols-12 gap-x-3 gap-y-6">
             <Reveal y={24} className="col-span-12 md:col-span-6">

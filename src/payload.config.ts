@@ -51,10 +51,10 @@ export default buildConfig({
   db: postgresAdapter({
     pool: {
       connectionString: process.env.DATABASE_URI || '',
-      max: Number(process.env.PG_POOL_MAX || 10),
+      max: 5,
       ssl: { rejectUnauthorized: false },
     },
-    push: process.env.NODE_ENV !== 'production',
+    push: true,
   }),
   email: process.env.RESEND_API_KEY ? resendEmail : undefined,
   i18n: {
