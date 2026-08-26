@@ -1,0 +1,13 @@
+
+> web@1.0.0 dev
+> cross-env NODE_OPTIONS=--no-deprecation next dev
+
+▲ Next.js 16.3.0 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.64:3000
+- Environments: .env
+✓ Ready in 1066ms
+✓ Running next.config.ts took 87ms
+- Experiments (use with caution):
+  ⨯ turbopackServerFastRefresh
+
