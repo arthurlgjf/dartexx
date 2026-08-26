@@ -4,7 +4,7 @@ import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import { FormRenderer } from '@/components/FormRenderer'
 import { Reveal } from '@/components/motion/Reveal'
-import { Button, Card, Logo } from '@/components/ui'
+import { Button, Card, Logo, SiteHeader } from '@/components/ui'
 import { ProductCollection } from '@/components/products/ProductCollection'
 import type { Form, Product, Reference, SiteSetting } from '@/payload-types'
 
@@ -133,28 +133,8 @@ export default async function HomePage() {
 
   return (
     <div className="min-h-dvh bg-white">
-      {/* ── Hlavička ──────────────────────────────────────────────────────── */}
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-zinc-200 bg-white/85 backdrop-blur-md">
-        <div className="container-page flex h-14 items-center justify-between">
-          <Link
-            href="/"
-            aria-label={siteName}
-            className="flex shrink-0 items-center transition hover:opacity-80"
-          >
-            <Logo />
-          </Link>
-          <nav className="hidden items-center gap-3 text-sm text-zinc-600 lg:flex">
-            {navLinks.slice(0, 4).map((link) => (
-              <a key={link.href} href={link.href} className="transition hover:text-zinc-900">
-                {link.label}
-              </a>
-            ))}
-          </nav>
-          <Button href="#kontakt">
-            Nezáväzná ponuka
-          </Button>
-        </div>
-      </header>
+      {/* ── Hlavička — transparentná nad videom, biela po scrolly ─────────── */}
+      <SiteHeader siteName={siteName} navLinks={navLinks} />
 
       {/* ── Hero — celoplošné video pozadie ──────────────────────────────── */}
       <section className="relative flex min-h-[100svh] items-center overflow-hidden border-b border-zinc-200 bg-black">
@@ -175,13 +155,6 @@ export default async function HomePage() {
         <div className="container-page relative pt-20 pb-16">
           <div className="grid grid-cols-12 gap-x-3">
             <div className="col-span-12 flex flex-col items-center text-center lg:col-span-8 lg:col-start-3">
-              <Reveal>
-                <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-md">
-                  <span className="size-1.5 rounded-full bg-accent-400" />
-                  Prenájom automatov na podujatia
-                </span>
-              </Reveal>
-
               <Reveal delay={0.08}>
                 <h1 className="mt-5 max-w-3xl text-white">
                   Podujatie plné zábavy,{' '}
@@ -204,7 +177,7 @@ export default async function HomePage() {
                   <Button
                     href="#automaty"
                     variant="secondary"
-                    className="border-white/30 bg-white/10 text-white backdrop-blur-md hover:border-white/60 hover:text-white"
+                    className="border-transparent bg-white text-zinc-900 shadow-[0_2px_8px_rgba(0,0,0,0.25)] hover:border-transparent hover:bg-zinc-100 hover:text-zinc-900"
                   >
                     Pozrieť automaty
                   </Button>
