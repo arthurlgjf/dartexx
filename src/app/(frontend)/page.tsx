@@ -153,7 +153,7 @@ export default async function HomePage() {
           aria-hidden
           className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"
         />
-        <div className="container-page relative pt-12 pb-16">
+        <div className="container-page relative pt-[152px] pb-16">
           <div className="grid grid-cols-12 gap-x-3">
             <div className="col-span-12 flex flex-col items-start text-left lg:col-span-8 lg:col-start-1">
               <Reveal delay={0.08}>
