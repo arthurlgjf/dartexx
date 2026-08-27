@@ -8,6 +8,8 @@ import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 
+import { supabaseStorage } from './plugins/supabaseStorage'
+
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Products } from './collections/Products'
@@ -68,6 +70,7 @@ export default buildConfig({
   },
   sharp,
   plugins: [
+    supabaseStorage(),
     formBuilderPlugin({
       fields: {
         checkbox: true,
