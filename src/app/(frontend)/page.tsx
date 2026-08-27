@@ -153,7 +153,7 @@ export default async function HomePage() {
           aria-hidden
           className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"
         />
-        <div className="container-page relative pt-24 pb-16">
+        <div className="container-page relative pt-12 pb-16">
           <div className="grid grid-cols-12 gap-x-3">
             <div className="col-span-12 flex flex-col items-start text-left lg:col-span-8 lg:col-start-1">
               <Reveal delay={0.08}>
@@ -164,14 +164,14 @@ export default async function HomePage() {
               </Reveal>
 
               <Reveal delay={0.16}>
-                <p className="mt-6 max-w-2xl text-[16px] leading-[24px] text-zinc-200">
+                <p className="mt-3 max-w-2xl text-[16px] leading-[24px] text-zinc-200">
                   Prenájom automatov a zábavných strojov pre podujatia, prevádzky aj verejné
                   priestory. Zaistíme dopravu, inštaláciu aj servis — vy pozvete hostí.
                 </p>
               </Reveal>
 
               <Reveal delay={0.24}>
-                <div className="mt-8 flex flex-wrap items-center justify-start gap-3">
+                <div className="mt-4 flex flex-wrap items-center justify-start gap-3">
                   <Button href="#kontakt">
                     Nezáväzná ponuka
                   </Button>
