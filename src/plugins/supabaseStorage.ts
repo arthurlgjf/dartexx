@@ -12,7 +12,7 @@ export const supabaseStorage = (): Plugin => {
       name: 'supabase',
       generateURL: ({ filename, prefix: urlPrefix = '' }: { filename: string; prefix?: string }) => {
         const path = `${prefix}${urlPrefix}${filename}`
-        return `${SUPABASE_URL}/storage/v1/object/public/${BUCKET}/${path}`
+        return `/media/${path}`
       },
       handleDelete: async ({ doc, filename }: { doc: { prefix?: string }; filename: string }) => {
         const path = `${doc.prefix || ''}${filename}`
