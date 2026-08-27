@@ -48,6 +48,7 @@ export const supabaseStorage = (): Plugin => {
       collections: {
         media: {
           adapter: adapter as any,
+          disablePayloadAccessControl: true,
         },
       },
       enabled: Boolean(SUPABASE_ANON_KEY),
